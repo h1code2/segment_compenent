@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<segment tabList="{{tabList}}" defaultIndex="0">
+  <view slot='0'>
+    page1
+  </view>
+  <view slot='1'>
+    page2
+  </view>
+  <view slot='2'>
+    page3
+  </view>
+</segment>

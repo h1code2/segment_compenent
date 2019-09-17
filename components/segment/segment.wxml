@@ -1,0 +1,15 @@
+<!--components/segment/segment.wxml-->
+<view class="segment-group">
+  <view class='top'>
+    <block wx:key="{{index}}" wx:for="{{tabList}}">
+      <view bindtap='onTabsItemTap' data-index='{{index}}' class="top-item">
+        <text class="{{currentTabsIndex==index?'on':''}}">{{item}}</text>
+      </view>
+    </block>
+  </view>
+  <view class='box'>
+  <view wx:for="{{tabList}}"  class='slot-group'>
+    <slot wx:if="{{currentTabsIndex==index}}" name="{{index}}"></slot>
+  </view>
+  </view>
+</view>
